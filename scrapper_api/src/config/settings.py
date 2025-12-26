@@ -22,7 +22,8 @@ class Settings:
             "LIST_PRICE": "#precio > span > b.mr-2.ft-3.PRECIO_NEW",
             "CASH_PRICE": "#prod_desc_edit > h2 > b:nth-child(2)",
             "INSTALLMENTS": "#precio > span > b.anterior_single.preciobot2",
-            "STOCK": "#prod_desc_edit > div:nth-child(3) > h6 > div"
+            "STOCK": "#prod_desc_edit > div:nth-child(3) > h6 > div",
+            "WARRANTY": "div.garantia-bloque p"
         }
         self.FULLH4RD_SELECTORS = {
             "PRODUCT_TITLE": "h1",
@@ -34,7 +35,8 @@ class Settings:
             "CASH_PRICE": "div.price-list-container > p > span.bold",
             "DISCOUNT_APPLICATED": "div.price-list-container > p:nth-child(1) > span:nth-child(2)",
             "WEB_STOCK": "div.stock-container > div:nth-child(1) > h5",
-            "LOCAL_STOCK": "div.stock-container > div:nth-child(2) > h5"
+            "LOCAL_STOCK": "div.stock-container > div:nth-child(2) > h5",
+            "WARRANTY": "//li[contains(text(), 'Garantía')]"
         }
         self.DATASOFT_SELECTORS = {
             "PRODUCT_TITLE": "h1 > span",
@@ -44,7 +46,8 @@ class Settings:
             "INSTALLMENTS": "div.block.pago > div:nth-child(1) > span",
             "LIST_PRICE": "span.pesos > strong",
             "CASH_PRICE": "#final_price",
-            "DISCOUNT_APPLICATED": ""
+            "DISCOUNT_APPLICATED": "",
+            "WARRANTY": "//td[contains(text(), 'Garantía')]/following-sibling::td"
         }
 
 

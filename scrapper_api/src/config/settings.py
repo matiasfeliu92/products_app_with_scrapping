@@ -14,6 +14,11 @@ logging.basicConfig(
 class Settings:
     def __init__(self):
         self.USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+        self.STORES = [
+            "mexx", 
+            "fullh4rd", 
+            "datasoft"
+        ]
         self.MEXX_SELECTORS = {
             "PRODUCT_TITLE": "h1",
             "SKU": "#prod_desc_edit > div.row.pr-0.pl-0.filaMarcas > div > h6:nth-child(2)",

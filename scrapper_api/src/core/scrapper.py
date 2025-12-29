@@ -4,8 +4,8 @@ import re
 import time
 from selenium.webdriver.common.by import By
 
-from src.config.settings import Settings
-from src.utils.extract_elements import ExtractElements
+from scrapper_api.src.config.settings import Settings
+from scrapper_api.src.utils.extract_elements import ExtractElements
 
 logging.basicConfig(
     level=logging.INFO,
@@ -60,6 +60,7 @@ class Scrapper:
             )
             logging.info("")
             logging.info("")
+            return self.product_data
 
         elif "fullh4rd.com.ar" in self.link:
             logging.info(
@@ -112,6 +113,7 @@ class Scrapper:
             )
             logging.info("")
             logging.info("")
+            return self.product_data
 
         elif "datasoft.com.ar" in self.link:
             logging.info(
@@ -153,3 +155,4 @@ class Scrapper:
             )
             logging.info("")
             logging.info("")
+            return self.product_data

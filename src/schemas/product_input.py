@@ -1,6 +1,7 @@
 from pydantic import BaseModel, field_validator, HttpUrl
 from fastapi import HTTPException
-from scrapper_api.src.config.settings import Settings
+
+from src.config.settings import Settings
 
 settings = Settings()
 stores = settings.STORES

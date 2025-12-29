@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from scrapper_api.src.api.product_routes import ProductRoutes
+from src.api.product_routes import ProductRoutes
 
 app = FastAPI()
 

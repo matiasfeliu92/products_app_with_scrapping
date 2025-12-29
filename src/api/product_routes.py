@@ -3,10 +3,10 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.responses import JSONResponse
 from typing import List
 
-from scrapper_api.src.config.settings import Settings
-from scrapper_api.src.core.scrapper import Scrapper
-from scrapper_api.src.schemas.product_input import ProductInput
-from scrapper_api.src.schemas.product_scrapped import ProductScraped
+from src.config.settings import Settings
+from src.core.scrapper import Scrapper
+from src.schemas.product_input import ProductInput
+from src.schemas.product_scrapped import ProductScraped
 
 logging.basicConfig(
     level=logging.INFO,

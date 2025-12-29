@@ -4,8 +4,8 @@ import re
 import time
 from selenium.webdriver.common.by import By
 
-from scrapper_api.src.config.settings import Settings
-from scrapper_api.src.utils.extract_elements import ExtractElements
+from src.config.settings import Settings
+from src.utils.extract_elements import ExtractElements
 
 logging.basicConfig(
     level=logging.INFO,

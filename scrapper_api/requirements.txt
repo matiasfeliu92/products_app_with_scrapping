@@ -1,7 +1,0 @@
-requests
-selenium
-lxml
-fastapi
-uvicorn
-webdriver-manager
-sqlmodel

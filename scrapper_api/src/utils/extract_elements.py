@@ -1,7 +1,7 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from src.config.settings import Settings
+from scrapper_api.src.config.settings import Settings
 
 class ExtractElements:
     def __init__(self, __driver__):

@@ -17,7 +17,9 @@ class Settings:
         self.STORES = [
             "mexx", 
             "fullh4rd", 
-            "datasoft"
+            "datasoft",
+            "armytech",
+            "compragamer"
         ]
         self.MEXX_SELECTORS = {
             "PRODUCT_TITLE": "h1",
@@ -54,7 +56,29 @@ class Settings:
             "DISCOUNT_APPLICATED": "",
             "WARRANTY": "//td[contains(text(), 'Garantía')]/following-sibling::td"
         }
-
+        self.ARMYTECH_SELECTORS = {
+            "PRODUCT_TITLE": "/html/body/main/section/div[2]/div/section/div[2]/div[1]/div[2]/div/div[1]/h1/span",
+            "SKU": "/html/body/main/section/div[2]/div/section/div[2]/div[1]/div[2]/div/div[1]/div[1]/span",
+            "BRAND": "/html/body/main/section/div[2]/div/section/div[2]/div[2]/section/div/div/div[1]/a",
+            "CATEGORY_PATH": '',
+            "INSTALLMENTS": "/html/body/main/section/div[2]/div/section/div[2]/div[1]/div[2]/div/div[1]/div[2]/div[3]/div[1]/div/div[1]/p[1]",
+            "LIST_PRICE": "/html/body/main/section/div[2]/div/section/div[2]/div[1]/div[2]/div/div[1]/div[2]/div[3]/div[1]/div/div[2]",
+            "CASH_PRICE": "/html/body/main/section/div[2]/div/section/div[2]/div[1]/div[2]/div/div[1]/div[2]/div[1]/div/span/span[3]",
+            "DISCOUNT_APPLICATED": "",
+            "WARRANTY": ""
+        }
+        self.COMPRA_GAMER_SELECTORS = {
+            "PRODUCT_TITLE": "/html/body/cgw-root/cgw-core/div/div[2]/div/main/cgw-product/div/cgw-base-card[1]/div/div/div/div[2]/div[2]/h1/span",
+            "SKU": "/html/body/cgw-root/cgw-core/div/div[2]/div/main/cgw-product/div/cgw-base-card[1]/div/div/div/div[2]/div[3]/mat-chip-listbox/div/mat-chip-option[1]/span[2]/button/span[2]/span[1]",
+            "BRAND": "/html/body/cgw-root/cgw-core/div/div[2]/div/main/cgw-product/div/cgw-base-card[1]/div/div/div/div[2]/div[1]/span[2]/span",
+            "CATEGORY_PATH": "/html/body/cgw-root/cgw-core/div/div[2]/div/main/cgw-product/div/cgw-base-card[1]/div/div/div/div[2]/div[1]/span[1]",
+            "BUTTON_FOR_INSTALLMENTS": "/html/body/cgw-root/cgw-core/div/div[2]/div/main/cgw-product/div/cgw-base-card[1]/div/div/div/div[2]/cgw-product-prices/div/div[2]/div/div[1]/span",
+            "INSTALLMENTS": "/html/body/div[3]/div[2]/div/mat-dialog-container/div/div/cgw-installments-modal-selector-multiple/div/div/table/tbody/tr[{}]/td[{}]/span",
+            "LIST_PRICE": "/html/body/cgw-root/cgw-core/div/div[2]/div/main/cgw-product/div/cgw-base-card[1]/div/div/div/div[2]/cgw-product-prices/div/div[2]/div/div[1]/div/cgw-price/span/span[2]",
+            "CASH_PRICE": "/html/body/cgw-root/cgw-core/div/div[2]/div/main/cgw-product/div/cgw-base-card[1]/div/div/div/div[2]/cgw-product-prices/div/div[1]/div/cgw-price/span/span[2]",
+            "STOCK": "/html/body/cgw-root/cgw-core/div/div[2]/div/main/cgw-product/div/cgw-base-card[1]/div/div/div/div[2]/div[4]/div[1]/span",
+            "WARRANTY": "/html/body/cgw-root/cgw-core/div/div[2]/div/main/cgw-product/div/cgw-base-card[1]/div/div/div/div[2]/div[4]/div[2]/div/span"
+        }
 
     def get_chrome_driver(self):
         options = Options()

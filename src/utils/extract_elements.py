@@ -11,14 +11,13 @@ class ExtractElements:
     def safe_find_elements(self, by, path, multiple=False, index=0, timeout=10):
         try:
             wait = WebDriverWait(self.driver, timeout)
+            wait.until(EC.visibility_of_element_located((by, path)))
             if multiple:
                 print("MULTIPLE")
-                wait.until(EC.presence_of_all_elements_located((by, path)))
                 elements = self.driver.find_elements(by, path)
                 return elements if elements else []
             else:
                 print("ELEMENT")
-                wait.until(EC.presence_of_element_located((by, path)))
                 element = self.driver.find_element(by, path)
                 return element if element else None
         except Exception as e:

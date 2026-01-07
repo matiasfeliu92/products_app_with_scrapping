@@ -1,11 +1,8 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from src.config.settings import Settings
-
 class ExtractElements:
     def __init__(self, __driver__):
-        self.settings = Settings()
         self.driver = __driver__
 
     def safe_find_elements(self, by, path, multiple=False, index=0, timeout=10):

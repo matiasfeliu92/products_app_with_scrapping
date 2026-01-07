@@ -1,14 +1,4 @@
-from fastapi import FastAPI
+from src.app_factory import AppCreator
 
-from src.api.product_routes import ProductRoutes
-
-app = FastAPI()
-
-product_routes = ProductRoutes().router
-
-app.include_router(product_routes)
-
-@app.get("/")
-def read_root():
-    print("----------------------------")
-    return {"Hello": "World"}
+app_creator = AppCreator()
+app = app_creator.app

@@ -1,10 +1,10 @@
 from pydantic import BaseModel, field_validator, HttpUrl
 from fastapi import HTTPException
 
-from src.config.settings import Settings
+from src.config.scrapper_settings import ScrapperSettings
 
-settings = Settings()
-stores = settings.STORES
+scrapper_settings = ScrapperSettings()
+stores = scrapper_settings.STORES
 
 class ProductInput(BaseModel):
     link: HttpUrl
